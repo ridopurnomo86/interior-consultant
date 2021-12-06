@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #181719;
+}
+.active {
+  border-bottom: 2px solid #ffffff;
+}
+
+.mt-s {
+  margin-top: 8px;
+}
+.underline {
+  text-decoration: underline;
+}
+/* Main */
+.container {
+  padding: 0px 77px;
+  min-height: 100vh;
+  color: #ffffff;
+  position: relative;
+}
+.navbar {
+  padding-top: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+  padding: 8px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+.link {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+}
+.link:active {
+  border-bottom: 2px solid #ffffff;
+}
+.menu {
+  display: flex;
+  gap: 86px;
+}
+.toggle {
+  display: none;
+  cursor: pointer;
+}
+.material-icons {
+  font-size: 28px;
+}
+
+/* Bio-Profile */
+.hero-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+}
+.created-by {
+  padding: 24px;
+  overflow: hidden;
+  min-width: 410px;
+  position: absolute;
+  bottom: 32px;
+  right: 7rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #181719;
+}
+.profile {
+  display: flex;
+  align-items: center;
+}
+.profile-image {
+  border-radius: 50%;
+}
+.profile-info {
+  margin-left: 18px;
+  font-family: "Montserrat", sans-serif;
+}
+.bio {
+  margin-top: 30px;
+  font-family: Lora;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 31px;
+}
+
+/* Hero Content */
+.hero-title {
+  font-family: Lora;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  margin-bottom: 40px;
+}
+.hero-info {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  max-width: 410px;
+}
+.hero-content {
+  width: 100%;
+}
+.read-more {
+  margin-top: 48px;
+  display: flex;
+  align-items: center;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  gap: 14px;
+}
+.hero-photo {
+  width: 100%;
+  min-width: 821px;
+}
+
+/* footer */
+.footer-text {
+  color: #ffffff;
+  margin-bottom: 12px;
+  text-align: center;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 1402px) {
+  .hero-photo {
+    width: 100%;
+    min-width: 351px;
+  }
+  .created-by {
+    bottom: 9rem;
+    right: 7rem;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .read-more {
+    margin-bottom: 37px;
+  }
+  .created-by {
+    bottom: -5rem;
+    right: 30%;
+  }
+  .hero-container {
+    flex-direction: column;
+    margin-bottom: 7rem;
+  }
+  .hero-photo {
+    width: 80%;
+  }
+}
+
+/* 1024px */
+@media screen and (max-width: 1024px) {
+  .navbar {
+    padding-top: 20px;
+  }
+  .container {
+    padding: 0px 20px;
+  }
+  .menu {
+    display: none;
+  }
+  .created-by {
+    bottom: -5rem;
+    right: 15%;
+    width: 50%;
+  }
+  .hero-photo {
+    width: 100%;
+  }
+  .toggle {
+    display: inline-block;
+  }
+  .hero-container {
+    margin-bottom: 10rem;
+  }
+}
+
+/* 576px */
+@media screen and (max-width: 576px) {
+  .hero-photo {
+    min-width: 212px;
+    width: 100%;
+  }
+  .hero-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+  .hero-info {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    width: 100%;
+  }
+  .hero-container {
+    margin-bottom: 10rem;
+  }
+  .created-by {
+    padding: 12px;
+    bottom: 5rem;
+    right: 5rem;
+    min-width: 150px;
+  }
+  .profile-info {
+    font-size: 12px;
+  }
+  .bio {
+    margin-top: 0px;
+    font-size: 16px;
+  }
+  .container {
+    padding: 0px 20px;
+  }
+}
+
+@media screen and (max-width: 452px) {
+  .created-by {
+    padding: 12px;
+    bottom: 8rem;
+    min-width: 220px;
+  }
+}
+
+/* Menu Humberger */
+.menu-humberger {
+  position: fixed;
+  display: none;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  height: 100vh;
+  width: 100%;
+  gap: 32px;
+  z-index: 100;
+  background-color: #181719;
+}
+
+/* icons */
+.menu-icon {
+  display: inline-block;
+}
+.close-icon {
+  display: none;
+}

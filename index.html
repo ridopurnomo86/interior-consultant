@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=5"/>
+    <link rel="icon" href="devchallenges.png" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://devchallenges.io/"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Interior Consultant</title>
+
+  </head>
+  <body>
+    <div class="container" id="container">
+
+      <!-- Header -->
+      <div class="navbar">
+        <div class="logo">
+          <p>THIS INTERIOR</p>
+        </div>
+        <span></span>
+        <div class="menu">
+          <a href="/" class="link active">Home</a>
+          <a href="/collection" class="link">Collection</a>
+          <a href="/about" class="link">About</a>
+          <a href="/contact" class="link">Contact</a>
+        </div>
+        <div class="toggle" id="toggle">
+            <span class="material-icons menu-icon" id="menu-icon">
+              menu
+            </span>
+          <span class="material-icons close-icon" id="close-icon">
+            close
+          </span>
+        </div>
+      </div>
+
+      <!-- Humberger Menu -->
+      <div class="menu-humberger" id="menu-humberger">
+        <a href="/" class="link active">Home</a>
+        <a href="/collection" class="link">Collection</a>
+        <a href="/about" class="link">About</a>
+        <a href="/contact" class="link">Contact</a>
+      </div>
+
+      <!-- Hero -->
+      <div class="hero-container">
+        <div class="hero-content">
+          <p class="hero-title">Modern interior</p>
+          <p class="hero-info">A full-Service residential & commercial 
+            interior design and staging company offering 
+            professional organizing & eco-services.
+          </p>
+          <div class="read-more">
+            <div>
+              <p>Read More</p>
+            </div>
+            <span class="material-icons ">
+              arrow_right_alt
+              </span>
+          </div>
+        </div>
+
+        <div>
+          <img src="./photo1.png"  alt="" class="hero-photo">
+          <div class="created-by">  
+            <div class="profile">
+              <img class="profile-image" src="./photo2.png" width="50px" height="50px" alt="">
+              <div class="profile-info">
+                <p>Aliza Webber</p>
+                <p class="mt-s">Interior designer</p>
+              </div>
+            </div>
+            <div class="bio">
+              <p>Designed in 2020 by</p>
+              <p>Aliza Webber</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <footer>
+      <p class="footer-text">created by <span class="underline">ridopurnomo86</span> - devChallenges.io</p>
+    </footer>
+
+    <script>
+      const menuIcon = document.getElementById("menu-icon")
+      const closeIcon = document.getElementById('close-icon')
+      const toggle = document.getElementById("toggle")
+      const menuHumberger = document.getElementById("menu-humberger")
+      const body = document.getElementsByTagName("BODY")
+      const logo = document.getElementsByClassName("logo")
+      
+      menuIcon.style.display = 'inline-block'
+      closeIcon.style.display = 'none'
+      menuHumberger.style.display = 'none'
+
+      // Handle Toggle
+      toggle.addEventListener('click', function(e) {
+          e.preventDefault()
+          if (menuIcon.style.display === 'inline-block') {
+            menuIcon.style.display = 'none'
+            closeIcon.style.display = 'inline-block'
+            menuHumberger.style.display = 'flex'
+            body[0].style.overflow = 'hidden'
+            logo[0].style.display = "none"
+          } else {
+            menuIcon.style.display = 'inline-block'
+            closeIcon.style.display = 'none'
+            menuHumberger.style.display = 'none'
+            body[0].style.overflow = 'auto'
+            logo[0].style.display = "inline-block"
+
+
+          }
+      })
+    </script>
+  </body>
+</html>
